@@ -61,7 +61,15 @@ function divide() {
   writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
 }
 
+function reset() {
+    const enteredNumber = 0;
+    const initialResult = defaultResult;
+    currentResult = defaultResult;
+    outputResult("reset");
+    writeToLog("RESET", initialResult, enteredNumber, defaultResult);
+}
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', divide);
+resetBtn.addEventListener('click', reset);
